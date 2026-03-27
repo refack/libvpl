@@ -153,15 +153,6 @@ if(INSTALL_DEV)
                                       COMPONENT ${VPL_COMPONENT_DEV})
   endif()
 
-  file(RELATIVE_PATH cmake_rel_prefix ${CMAKE_INSTALL_FULL_LIBDIR}/cmake/vpl
-       ${CMAKE_INSTALL_PREFIX})
-  file(RELATIVE_PATH cmake_rel_libdir ${CMAKE_INSTALL_FULL_LIBDIR}/cmake/vpl
-       ${CMAKE_INSTALL_FULL_LIBDIR})
-  file(RELATIVE_PATH cmake_rel_incdir ${CMAKE_INSTALL_FULL_LIBDIR}/cmake/vpl
-       ${CMAKE_INSTALL_FULL_INCLUDEDIR})
-  file(RELATIVE_PATH cmake_rel_bindir ${CMAKE_INSTALL_FULL_LIBDIR}/cmake/vpl
-       ${CMAKE_INSTALL_FULL_BINDIR})
-
   configure_file(cmake/VPLConfig.cmake.in cmake/VPLConfig.cmake @ONLY)
   configure_file(cmake/VPLConfigVersion.cmake.in cmake/VPLConfigVersion.cmake
                  @ONLY)
